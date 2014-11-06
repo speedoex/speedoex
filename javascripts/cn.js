@@ -54,7 +54,7 @@
 
 var Restr=/^\d{12}$/;
  $("form").submit(function(e) {
-	 alert('hello');
+	 alert('helll');
  	var sval = $("#tracking").val();
  	if (sval == $("#tracking").attr('fs') || sval == '') {
  		error(3);
