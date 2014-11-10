@@ -66,8 +66,7 @@ function error(times) {
 var Restr=/^\d{12}$/;
 
 $("form").submit(function(e) {
-	var sval = $("#tracking").val();
-	sval=sval.replaceAll("(\n|\r|(\r\n)|(\u0085)|(\u2028)|(\u2029))", "");
+	var sval = $("#tracking").val();z
 	if (sval == $("#tracking").attr('fs') || sval == '') {
 		error(3);
 		return false;
@@ -78,7 +77,7 @@ $("form").submit(function(e) {
 		});
 		return false;
 	}else{
-		window.location.href="http://www.speedoex.com/tc/express?trackid="+sval;
+		window.location.href="http://www.speedoex.com/express";
+		return false;
 	}
-	return false;
 });

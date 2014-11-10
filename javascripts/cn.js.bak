@@ -66,7 +66,7 @@ var Restr=/^\d{12}$/;
 		});
 		return false;
 	}else{
-		window.location.href="http://www.speedoex.com/tc/express?trackid="+sval;
+		window.location.href="http://www.speedoex.com/cn/express?trackid="+sval;
 	}
 	return false;
  });
