@@ -64,7 +64,25 @@ function error(times) {
 	setTimeout("normal(" + times + ")", 150);
 }
 var Restr=/^\d{12}$/;
-
+$('#tracking').keypress(function(e){
+            if(e.which == 13) {
+				
+			$("form").submit(function(e) {
+	var sval = $("#tracking").val();
+	if (sval == $("#tracking").attr('fs') || sval == '') {
+		error(3);
+		return false;
+	}else if(!Restr.test($.trim(sval))){
+		$('#qpart').append('<div id="toast" style="height:35px;display:none;width:246px;_width:260px;*width:260px;position:absolute;left:2px;bottom:48px;background:#fdf6e2;color:#f86d00;font-weight:bold;text-align:center;line-height:35px;font-size:14px;font-weight:bold;">請輸入12位運單號追蹤</div>');
+		$('#toast').stop(true,false).animate({height:"show"},1000,function(){
+			setTimeout(function(){$('#toast').animate({height:'hide'},1000);},1000);
+		});
+		return false;
+	}
+});
+			}
+			
+})
 $("form").submit(function(e) {
 	var sval = $("#tracking").val();
 	if (sval == $("#tracking").attr('fs') || sval == '') {
