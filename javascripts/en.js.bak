@@ -75,5 +75,8 @@ var Restr=/^\d{12}$/;
 			setTimeout(function(){$('#toast').animate({height:'hide'},1000);},1000);
 		});
 		return false;
+	}else{
+		window.location.href="http://www.speedoex.com/tc/express?trackid="+sval;
 	}
+	return false;
  });
