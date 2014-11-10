@@ -76,7 +76,7 @@ $('#tracking').keypress(function(e){
 		});
 		return false;
 	}
-	window.location.href="http://www.speedoex.com/cn";
+	window.location.href="http://www.speedoex.com/tc/express?trackid="+sval;
 			}
 			
 })

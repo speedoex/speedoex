@@ -64,6 +64,7 @@
 
 var Restr=/^\d{12}$/; 
 $('#tracking').keypress(function(e){
+	var Restr=/^\d{12}$/;
             if(e.which == 13) {
 				e.preventDefault();
  	var sval = $("#tracking").val();
@@ -82,6 +83,7 @@ window.location.href="http://www.speedoex.com/express?trackid="+sval;
 });
 
  $("form").submit(function(e) {
+	 var Restr=/^\d{12}$/;
  	var sval = $("#tracking").val();
  	if (sval == $("#tracking").attr('fs') || sval == '') {
  		error(3);
