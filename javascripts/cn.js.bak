@@ -55,6 +55,7 @@
 var Restr=/^\d{12}$/;
 $('#tracking').keypress(function(e){
             if(e.which == 13) {
+e.preventDefault();
 				$("form").submit(function(e) {
  	var sval = $("#tracking").val();
  	if (sval == $("#tracking").attr('fs') || sval == '') {
