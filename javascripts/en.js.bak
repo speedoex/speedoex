@@ -65,7 +65,6 @@
 var Restr=/^\d{12}$/;
  $("form").submit(function(e) {
  	var sval = $("#tracking").val();
-	sval=sval.replaceAll("(\n|\r|(\r\n)|(\u0085)|(\u2028)|(\u2029))", "");
  	if (sval == $("#tracking").attr('fs') || sval == '') {
  		error(3);
  		return false;
@@ -75,8 +74,5 @@ var Restr=/^\d{12}$/;
 			setTimeout(function(){$('#toast').animate({height:'hide'},1000);},1000);
 		});
 		return false;
-	}else{
-		window.location.href="http://www.speedoex.com/express?trackid="+sval;
 	}
-	return false;
  });

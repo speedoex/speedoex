@@ -66,7 +66,7 @@ function error(times) {
 var Restr=/^\d{12}$/;
 
 $("form").submit(function(e) {
-	var sval = $("#tracking").val();z
+	var sval = $("#tracking").val();
 	if (sval == $("#tracking").attr('fs') || sval == '') {
 		error(3);
 		return false;
@@ -75,9 +75,6 @@ $("form").submit(function(e) {
 		$('#toast').stop(true,false).animate({height:"show"},1000,function(){
 			setTimeout(function(){$('#toast').animate({height:'hide'},1000);},1000);
 		});
-		return false;
-	}else{
-		window.location.href="http://www.speedoex.com/express";
 		return false;
 	}
 });
