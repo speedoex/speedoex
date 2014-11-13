@@ -67,7 +67,7 @@ $('#tracking').keypress(function(e){
 	var Restr=/^\d{12}$/;
             if(e.which == 13) {
 				e.preventDefault();
- 	var sval = $("#tracking").val();
+ 	var sval = $("#tracking").val().replace(/[\r\n]/g,"");
  	if (sval == $("#tracking").attr('fs') || sval == '') {
  		error(3);
  		return false;
@@ -84,7 +84,7 @@ window.location.href="http://www.speedoex.com/express?trackid="+sval;
 
  $("form").submit(function(e) {
 	 var Restr=/^\d{12}$/;
- 	var sval = $("#tracking").val().replace(/[\r\n]/g,"");;
+ 	var sval = $("#tracking").val().replace(/[\r\n]/g,"");
  	if (sval == $("#tracking").attr('fs') || sval == '') {
  		error(3);
  		return false;
