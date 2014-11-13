@@ -83,4 +83,6 @@ e.preventDefault();
 		});
 		return false;
 	}
+		window.location.href="http://www.speedoex.com/cn/express?trackid="+sval;
+		return false;
  });
