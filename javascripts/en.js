@@ -62,7 +62,7 @@
  	setTimeout("normal(" + times + ")", 150);
  }
 
-var Restr=/^\d{12}$/; 
+var Restr=/^\d{11,12}$/; 
 $('#tracking').keypress(function(e){
 	var Restr=/^\d{12}$/;
             if(e.which == 13) {
@@ -83,7 +83,7 @@ window.location.href="http://www.speedoex.com/express?trackid="+sval;
 });
 
  $("form").submit(function(e) {
-	 var Restr=/^\d{12}$/;
+	 var Restr=/^\d{11,12}$/;
  	var sval = $("#tracking").val().replace(/[\r\n]/g,"");
  	if (sval == $("#tracking").attr('fs') || sval == '') {
  		error(3);
