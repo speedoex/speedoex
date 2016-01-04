@@ -64,7 +64,7 @@
 
 var Restr=/^\d{11,12}$/; 
 $('#tracking').keypress(function(e){
-	var Restr=/^\d{12}$/;
+	var Restr=/^\d{11,12}$/;
             if(e.which == 13) {
 				e.preventDefault();
  	var sval = $("#tracking").val().replace(/[\r\n]/g,"");
